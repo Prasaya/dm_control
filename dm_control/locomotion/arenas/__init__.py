@@ -19,6 +19,7 @@ from dm_control.locomotion.arenas.corridors import EmptyCorridor
 from dm_control.locomotion.arenas.corridors import GapsCorridor
 from dm_control.locomotion.arenas.corridors import WallsCorridor
 from dm_control.locomotion.arenas.floors import Floor
+from dm_control.locomotion.arenas.floor_with_walls import FloorWithWalls
 from dm_control.locomotion.arenas.labmaze_textures import FloorTextures
 from dm_control.locomotion.arenas.labmaze_textures import SkyBox
 from dm_control.locomotion.arenas.labmaze_textures import WallTextures
