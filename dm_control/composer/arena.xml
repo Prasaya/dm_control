@@ -3,7 +3,7 @@
 
   <option cone='elliptic' noslip_iterations='5' noslip_tolerance='0' timestep='0.002'/>
   <asset>
-    <mesh name="chair" file="/home/prasaya/cs-projects/MujocoProject/MajorProjectMujoco/mesh/chairF.obj"/>
+    <mesh name="chair" file="../../../mesh/chairF.obj"/>
   </asset>
   <visual>
     <map znear='0.01'/>
