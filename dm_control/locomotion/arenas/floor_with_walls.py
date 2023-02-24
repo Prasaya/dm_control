@@ -47,50 +47,52 @@ class FloorWithWalls(composer.Arena):
         type='plane',
         name='groundplane',
         material=self._ground_material,
-        size=list(size) + [_GROUNDPLANE_QUAD_SIZE])
+        # size=[1,1,1]
+        size=list(size) + [_GROUNDPLANE_QUAD_SIZE]
+        )
     
-    self.mjcf_model.worldbody.add(
-        'geom', 
-        name='wall1', 
-        type='box', 
-        size=[5, 0.5, 0.5], 
-        pos=[5, 3, 0])
+    # self.mjcf_model.worldbody.add(
+    #     'geom', 
+    #     name='wall1', 
+    #     type='box', 
+    #     size=[5, 0.5, 0.5], 
+    #     pos=[5, 3, 0])
     self.mjcf_model.worldbody.add(
         'geom', 
         name='wall2', 
         type='box', 
         size=[1, 5.5, 0.5], 
         pos=[10, 3, 0])
-    self.mjcf_model.worldbody.add(
-        'geom', 
-        name='wall11', 
-        type='box', 
-        size=[5, 0.5, 0.5], 
-        pos=[15, -7.5, 0])
+    # self.mjcf_model.worldbody.add(
+    #     'geom', 
+    #     name='wall11', 
+    #     type='box', 
+    #     size=[5, 0.5, 0.5], 
+    #     pos=[15, -7.5, 0])
     self.mjcf_model.worldbody.add(
         'geom', 
         name='wall12', 
         type='box', 
         size=[1, 5.5, 0.5], 
-        pos=[20, -7.5, 0])
-    self.mjcf_model.worldbody.add(
-        'geom', 
-        name='wall21', 
-        type='box', 
-        size=[5, 0.5, 0.5], 
-        pos=[25, 3, 0])
+        pos=[20, -7.95, 0])
+    # self.mjcf_model.worldbody.add(
+    #     'geom', 
+    #     name='wall21', 
+    #     type='box', 
+    #     size=[5, 0.5, 0.5], 
+    #     pos=[25, 3, 0])
     self.mjcf_model.worldbody.add(
         'geom', 
         name='wall22', 
         type='box', 
         size=[1, 5.5, 0.5], 
         pos=[30, 3, 0])
-    self.mjcf_model.worldbody.add(
-        'geom', 
-        name='wall31', 
-        type='box', 
-        size=[5, 0.5, 0.5], 
-        pos=[35, -7.5, 0])
+    # self.mjcf_model.worldbody.add(
+    #     'geom', 
+    #     name='wall31', 
+    #     type='box', 
+    #     size=[5, 0.5, 0.5], 
+    #     pos=[35, -7.5, 0])
     self.mjcf_model.worldbody.add(
         'geom', 
         name='wall32', 
@@ -99,10 +101,111 @@ class FloorWithWalls(composer.Arena):
         pos=[40, -7.5, 0])
     self.mjcf_model.worldbody.add('geom', 
         type='mesh', 
-        mesh='chair', 
-        pos=[5.25, +2, 0], 
+        mesh='roof_nofloor', 
+        pos=[5.25, 30, 0], 
         size=[1, 1, 1])
-
+    self.mjcf_model.worldbody.add('geom', 
+        type='mesh', 
+        mesh='chair', 
+        pos=[5.25, 30, 0], 
+        size=[1, 1, 1])
+    self.mjcf_model.worldbody.add('geom', 
+        type='mesh', 
+        mesh='chair', 
+        pos=[5.25, 31, 0], 
+        size=[1, 1, 1])
+    self.mjcf_model.worldbody.add('geom', 
+        type='mesh', 
+        mesh='chair', 
+        pos=[5.25, 32, 0], 
+        size=[1, 1, 1])
+    self.mjcf_model.worldbody.add('geom', 
+        type='mesh', 
+        mesh='chair', 
+        pos=[5.25, 33, 0], 
+        size=[1, 1, 1])
+    self.mjcf_model.worldbody.add('geom', 
+        type='mesh', 
+        mesh='chair', 
+        pos=[5.25, 34, 0], 
+        size=[1, 1, 1])
+    self.mjcf_model.worldbody.add('geom', 
+        type='mesh', 
+        mesh='chair', 
+        pos=[5.25, 35, 0], 
+        size=[1, 1, 1])
+    
+    self.mjcf_model.worldbody.add('geom', 
+        type='mesh', 
+        mesh='table', 
+        pos=[-3, 25, 0], 
+        size=[1, 1, 1])
+    self.mjcf_model.worldbody.add('geom', 
+        type='mesh', 
+        mesh='table', 
+        pos=[-3, 26, 0], 
+        size=[1, 1, 1])
+    self.mjcf_model.worldbody.add('geom', 
+        type='mesh', 
+        mesh='table', 
+        pos=[-3, 27, 0], 
+        size=[1, 1, 1])
+    self.mjcf_model.worldbody.add('geom', 
+        type='mesh', 
+        mesh='table', 
+        pos=[-3, 28, 0], 
+        size=[1, 1, 1])
+    self.mjcf_model.worldbody.add('geom', 
+        type='mesh', 
+        mesh='table', 
+        pos=[-3, 29, 0], 
+        size=[1, 1, 1])
+    self.mjcf_model.worldbody.add('geom', 
+        type='mesh', 
+        mesh='table', 
+        pos=[-3, 30, 0], 
+        size=[1, 1, 1])
+    self.mjcf_model.worldbody.add('geom', 
+        type='mesh', 
+        mesh='table', 
+        pos=[-3, 31, 0], 
+        size=[1, 1, 1])
+    self.mjcf_model.worldbody.add('geom', 
+        type='mesh', 
+        mesh='table', 
+        pos=[-3, 32, 0], 
+        size=[1, 1, 1])
+    self.mjcf_model.worldbody.add('geom', 
+        type='mesh', 
+        mesh='table', 
+        pos=[-3, 33, 0], 
+        size=[1, 1, 1])
+    self.mjcf_model.worldbody.add('geom', 
+        type='mesh', 
+        mesh='table', 
+        pos=[-3, 34, 0], 
+        size=[1, 1, 1])
+    self.mjcf_model.worldbody.add('geom', 
+        type='mesh', 
+        mesh='table', 
+        pos=[-3, 35, 0], 
+        size=[1, 1, 1])
+    
+    self.mjcf_model.worldbody.add('geom', 
+        type='mesh', 
+        mesh='barrier', 
+        pos=[12, 29, 0], 
+        size=[1, 1, 1])
+    self.mjcf_model.worldbody.add('geom', 
+        type='mesh', 
+        mesh='barrier', 
+        pos=[12, 26, 0], 
+        size=[1, 1, 1])
+    self.mjcf_model.worldbody.add('geom', 
+        type='mesh', 
+        mesh='barrier', 
+        pos=[12, 32, 0], 
+        size=[1, 1, 1])
 
     
     
